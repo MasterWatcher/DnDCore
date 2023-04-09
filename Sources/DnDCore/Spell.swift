@@ -15,3 +15,8 @@ public struct Spell: Codable {
     public var addPrimarySpellAbility = false
     public var isAttack: Bool = true
 }
+
+public extension Spell {
+    static let healingWord = Spell(name: "Healing Word", dice: .d4, addPrimarySpellAbility: true, isAttack: false)
+    static let rayOfSickness = Spell(name: "Ray of Sickness", diceCount: 2, dice: .d8)
+}
