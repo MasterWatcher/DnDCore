@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Money {
+public struct Money: Codable {
     public var copper: Int = 0
     public var silver: Int = 0
     public var electrum: Int = 0

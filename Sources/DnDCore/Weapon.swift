@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Weapon: Hashable {
+public struct Weapon: Codable {
     public let name: String
     public let dice: Dice
     public let ability: AbilityType

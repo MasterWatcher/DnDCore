@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Skill: String, CaseIterable {
+public enum Skill: String, CaseIterable, Codable {
     case acrobatics
     case animalHandling = "Animal Handling"
     case arcana

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BasicInfo {
+public struct BasicInfo: Codable {
     public let name: String
     public let `class`: Class
     public let level: Int

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Alignment {
+public struct Alignment: Codable {
     public let ethic: Ethic
     public let moral: Moral
 
@@ -19,13 +19,13 @@ public struct Alignment {
         }
     }
     
-    public enum Ethic: String {
+    public enum Ethic: String, Codable {
         case lawful
         case neutral
         case chaotic
     }
 
-    public enum Moral: String {
+    public enum Moral: String, Codable {
         case good
         case neutral
         case evil

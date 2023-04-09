@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Character {
+public struct Character: Codable {
     public let basicInfo: BasicInfo
     public var abilities: Abilities
     public var inspiration: Bool

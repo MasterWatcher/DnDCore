@@ -10,7 +10,7 @@ import Foundation
 public typealias Ability = Int
 public typealias Modifier = Int
 
-public struct Abilities {
+public struct Abilities: Codable {
     public var strength: Ability
     public var dexterity: Ability
     public var constitution: Ability
@@ -38,7 +38,7 @@ public extension Ability {
     }
 }
 
-public enum AbilityType: String, CaseIterable {
+public enum AbilityType: String, CaseIterable, Codable {
     case strength
     case dexterity
     case constitution

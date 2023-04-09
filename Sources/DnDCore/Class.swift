@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Class: String {
+public enum Class: String, Codable {
     case artificer
     case barbarian
     case bard

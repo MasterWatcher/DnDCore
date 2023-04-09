@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Dice: String, CaseIterable {
+public enum Dice: String, CaseIterable, Codable {
     case d4
     case d6
     case d8

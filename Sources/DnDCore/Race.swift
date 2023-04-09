@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Race: String {
+public enum Race: String, Codable {
     case dragonborn
     case dwarf
     case elf

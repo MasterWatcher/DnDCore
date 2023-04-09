@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct HitPoints {
+public struct HitPoints: Codable {
     public var current: Int
     public var temporary: Int
 }

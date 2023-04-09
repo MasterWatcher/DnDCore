@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct DeathSaves {
+public struct DeathSaves: Codable {
     public let successes: Throw
     public let failures: Throw
 
-    public enum Throw: Int {
+    public enum Throw: Int, Codable {
         case zero
         case one
         case two
