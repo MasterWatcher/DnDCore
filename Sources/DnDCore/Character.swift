@@ -11,7 +11,6 @@ public struct Character: Codable {
     public let basicInfo: BasicInfo
     public var abilities: Abilities
     public var inspiration: Bool
-    public var proficiencyBonus: Int
     public var hitPoints: HitPoints
     public var deathSaves: DeathSaves = .init(successes: .zero, failures: .zero)
     public var money: Money
@@ -21,6 +20,10 @@ public struct Character: Codable {
 }
 
 public extension Character {
+
+    var proficiencyBonus: Int {
+        DnDCore.proficiencyBonus(forExperience: basicInfo.experience)
+    }
 
     var primarySpellAbility: Ability {
         abilities[basicInfo.class.primarySpellAbilityType]
@@ -92,7 +95,6 @@ public extension Character {
     static let fludd: Character =  .init(
         basicInfo: .init(name: "Fludd",
                          class: .artificer,
-                         level: 6,
                          background: "",
                          playerName: "BunsLicker",
                          race: .dwarf,
@@ -106,7 +108,6 @@ public extension Character {
             wisdom: 14,
             charisma: 10),
         inspiration: true,
-        proficiencyBonus: 3,
         hitPoints: .init(current: 10, temporary: 0),
         deathSaves: .init(successes: .two, failures: .zero),
         money: .init(gold: 100),

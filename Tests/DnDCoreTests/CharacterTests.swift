@@ -1,6 +1,4 @@
 import XCTest
 @testable import DnDCore
 
-final class CharacterTests: XCTestCase {
-
-}
+final class DNDCoreTests: XCTestCase {}
