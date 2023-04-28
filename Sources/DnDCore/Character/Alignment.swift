@@ -19,13 +19,13 @@ public struct Alignment: Codable {
         }
     }
     
-    public enum Ethic: String, Codable {
+    public enum Ethic: String, CaseIterable, Codable {
         case lawful
         case neutral
         case chaotic
     }
 
-    public enum Moral: String, Codable {
+    public enum Moral: String, CaseIterable, Codable {
         case good
         case neutral
         case evil
