@@ -19,7 +19,7 @@ public struct Alignment: Codable {
 
     public var description: String {
         if case (.neutral, .neutral) = (ethic, moral) {
-            return "True Neutral"
+            return Alignment.trueNeutral
         } else {
             return ethic.rawValue.capitalized + " " + moral.rawValue.capitalized
         }
@@ -36,4 +36,9 @@ public struct Alignment: Codable {
         case neutral
         case evil
     }
+}
+
+
+public extension Alignment {
+    static var trueNeutral = "True Neutral"
 }
