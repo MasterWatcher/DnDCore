@@ -8,8 +8,14 @@
 import Foundation
 
 public struct Alignment: Codable {
+
     public let ethic: Ethic
     public let moral: Moral
+
+    public init(ethic: Ethic, moral: Moral) {
+        self.ethic = ethic
+        self.moral = moral
+    }
 
     public var description: String {
         if case (.neutral, .neutral) = (ethic, moral) {
