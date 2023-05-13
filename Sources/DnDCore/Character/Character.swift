@@ -12,7 +12,7 @@ public struct Character: Codable {
     public var abilities: Abilities
     public var inspiration: Bool
     public var hitPoints: HitPoints
-    public var deathSaves: DeathSaves = .init(successes: .zero, failures: .zero)
+    public var deathSaves: DeathSaves
     public var money: Money
     public var skills: [Skill]
     public var weapons: [Weapon]
@@ -21,9 +21,9 @@ public struct Character: Codable {
     public init(
         basicInfo: BasicInfo,
         abilities: Abilities,
-        inspiration: Bool,
+        inspiration: Bool = false,
         hitPoints: HitPoints,
-        deathSaves: DeathSaves,
+        deathSaves: DeathSaves = .init(successes: .zero, failures: .zero),
         money: Money,
         skills: [Skill],
         weapons: [Weapon],
