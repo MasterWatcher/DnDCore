@@ -11,6 +11,11 @@ public struct DeathSaves: Codable {
     public let successes: Throw
     public let failures: Throw
 
+    public init(successes: Throw, failures: Throw) {
+        self.successes = successes
+        self.failures = failures
+    }
+
     public enum Throw: Int, Codable {
         case zero
         case one

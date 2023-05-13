@@ -17,6 +17,27 @@ public struct Character: Codable {
     public var skills: [Skill]
     public var weapons: [Weapon]
     public var spells: [Spell]
+
+    public init(
+        basicInfo: BasicInfo,
+        abilities: Abilities,
+        inspiration: Bool,
+        hitPoints: HitPoints,
+        deathSaves: DeathSaves,
+        money: Money,
+        skills: [Skill],
+        weapons: [Weapon],
+        spells: [Spell]) {
+            self.basicInfo = basicInfo
+            self.abilities = abilities
+            self.inspiration = inspiration
+            self.hitPoints = hitPoints
+            self.deathSaves = deathSaves
+            self.money = money
+            self.skills = skills
+            self.weapons = weapons
+            self.spells = spells
+        }
 }
 
 public extension Character {

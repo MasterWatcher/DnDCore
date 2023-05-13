@@ -16,6 +16,23 @@ public struct BasicInfo: Codable {
     public let alignment: Alignment
     public let experience: Int
 
+    public init(
+        name: String,
+        `class`: Class,
+        background: String,
+        playerName: String,
+        race: Race,
+        alignment: Alignment,
+        experience: Int) {
+            self.name = name
+            self.class = `class`
+            self.background = background
+            self.playerName = playerName
+            self.race = race
+            self.alignment = alignment
+            self.experience = experience
+        }
+
     public var level: Int {
         DnDCore.level(forExperience: experience)
     }

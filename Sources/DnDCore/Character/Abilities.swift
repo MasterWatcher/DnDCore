@@ -17,6 +17,21 @@ public struct Abilities: Codable {
     public var intelligence: Ability
     public var wisdom: Ability
     public var charisma: Ability
+
+    public init(
+        strength: Ability,
+        dexterity: Ability,
+        constitution: Ability,
+        intelligence: Ability,
+        wisdom: Ability,
+        charisma: Ability){
+            self.strength = strength
+            self.dexterity = dexterity
+            self.constitution = constitution
+            self.intelligence = intelligence
+            self.wisdom = wisdom
+            self.charisma = charisma
+        }
 }
 
 public extension Abilities {

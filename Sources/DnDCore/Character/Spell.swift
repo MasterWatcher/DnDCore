@@ -9,11 +9,26 @@ import Foundation
 
 public struct Spell: Codable {
     public let name: String
-    public var diceCount: Int = 1
+    public let diceCount: Int
     public let dice: Dice
-    public var modifier: Int? = nil
-    public var addPrimarySpellAbility = false
-    public var isAttack: Bool = true
+    public let modifier: Int?
+    public let addPrimarySpellAbility: Bool
+    public let isAttack: Bool
+
+    public init(
+        name: String,
+        diceCount: Int = 1,
+        dice: Dice,
+        modifier: Int? = nil,
+        addPrimarySpellAbility: Bool = false,
+        isAttack: Bool = true) {
+            self.name = name
+            self.diceCount = diceCount
+            self.dice = dice
+            self.modifier = modifier
+            self.addPrimarySpellAbility = addPrimarySpellAbility
+            self.isAttack = isAttack
+        }
 }
 
 public extension Spell {

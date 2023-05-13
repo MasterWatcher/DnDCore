@@ -11,6 +11,12 @@ public struct Weapon: Codable {
     public let name: String
     public let dice: Dice
     public let ability: AbilityType
+
+    public init(name: String, dice: Dice, ability: AbilityType) {
+        self.name = name
+        self.dice = dice
+        self.ability = ability
+    }
 }
 
 public extension Weapon {
