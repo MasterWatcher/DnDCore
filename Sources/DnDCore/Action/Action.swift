@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Action {
+public struct Action: Codable {
     public let name: String
     public let diceCount: Int
     public let dice: Dice

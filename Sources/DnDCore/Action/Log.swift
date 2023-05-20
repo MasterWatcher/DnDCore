@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Log {
+public struct Log: Codable {
 
     public let name: String
     public let diceCount: Int

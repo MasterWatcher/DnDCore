@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ModifierLog {
+public struct ModifierLog: Codable {
     public let name: String
     public let value: Modifier
 }

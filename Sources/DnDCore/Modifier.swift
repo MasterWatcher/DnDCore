@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ModifierType {
+public enum ModifierType: Codable {
     case ability(AbilityType)
     case primarySpellAbility
     case custom(value: Int)
